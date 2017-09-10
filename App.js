@@ -1,21 +1,20 @@
+//App.js
+
+//Import a library to help create a component.
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+//Create a component
+const App = () => (
+	<View>
+		<Header HeaderText={'Albums'} />
+		<AlbumList />
+   </View>
+);
+  
+//Render it to the device.  
+//AppRegistry.registerComponent('albums', () => App);
+export default App;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
